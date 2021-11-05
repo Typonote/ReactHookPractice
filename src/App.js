@@ -1,8 +1,9 @@
 import "./App.css";
 import Counter from "./HookPractice/Counter";
+import Info from "./HookPractice/Info";
 
 function App() {
-  return <Counter />;
+  return <Info />;
 }
 
 export default App;
