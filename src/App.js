@@ -18,7 +18,8 @@ function App() {
     //   <hr />
     //   {visible && <Info />}
     // </div>
-    <Counter />
+    <Info />
+    // <Counter />
   );
 }
 
