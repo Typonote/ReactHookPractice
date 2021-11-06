@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Average from "./HookPractice/Average";
 import Counter from "./HookPractice/Counter";
 import Info from "./HookPractice/Info";
 
@@ -18,7 +19,8 @@ function App() {
     //   <hr />
     //   {visible && <Info />}
     // </div>
-    <Info />
+    // <Info />
+    <Average />
     // <Counter />
   );
 }
