@@ -19,8 +19,8 @@ function App() {
     //   <hr />
     //   {visible && <Info />}
     // </div>
-    // <Info />
-    <Average />
+    <Info />
+    // <Average />
     // <Counter />
   );
 }

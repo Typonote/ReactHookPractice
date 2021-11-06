@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
+import CustomHook from "./CustomHook";
 
 // useReducer에서 액션은 그 어떤 값도 사용 가능 => 이벤트 객체가 가지고 있는 e.target 값 자체를 액션 값으로 사용가능하다.
 function reducer(state, action) {
@@ -9,12 +10,12 @@ function reducer(state, action) {
 }
 
 const Info = () => {
-  const [state, dispatch] = useReducer(reducer, { name: "", nickname: "" });
+  const [state, onChange] = CustomHook({ name: "", nickname: "" });
   const { name, nickname } = state; // {} 주의!
 
-  const onChangeHandler = (e) => {
-    dispatch(e.target);
-  };
+  // const onChangeHandler = (e) => {
+  //   dispatch(e.target);
+  // };
 
   return (
     <div className="flex flex-col text-center mt-10 items-center justify-center py-5">
@@ -24,14 +25,14 @@ const Info = () => {
           placeholder="이름"
           name="name"
           value={name}
-          onChange={onChangeHandler}
+          onChange={onChange}
         />
         <input
           className="px-4 py-2 rounded-lg border border-blue-500 text-blue-600 placeholder-blue-600 m-3"
           placeholder="닉네임"
           name="nickname"
           value={nickname}
-          onChange={onChangeHandler}
+          onChange={onChange}
         />
       </div>
       <div className="mt-10">
